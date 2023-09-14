@@ -1,4 +1,3 @@
-cmake_minimum_required(VERSION 3.26)
 project(2_6 C)
 
 file(GLOB SRC_FILES src/*.c src/*.h)
