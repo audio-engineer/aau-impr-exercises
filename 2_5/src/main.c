@@ -15,7 +15,7 @@ int main() {
     return EXIT_FAILURE;
   }
 
-  unsigned long input_seconds_long = strtol(input_buffer, &end, kBase);
+  unsigned long input_seconds = strtol(input_buffer, &end, kBase);
 
   if (*end != '\n') {
     return EXIT_FAILURE;
@@ -26,18 +26,18 @@ int main() {
   unsigned long seconds_per_day = seconds_per_hour * kHours;
   unsigned long seconds_per_week = seconds_per_day * kDays;
 
-  unsigned long weeks = input_seconds_long / seconds_per_week;
-  input_seconds_long %= seconds_per_week;
+  unsigned long weeks = input_seconds / seconds_per_week;
+  input_seconds %= seconds_per_week;
 
-  unsigned long days = input_seconds_long / seconds_per_day;
-  input_seconds_long %= seconds_per_day;
+  unsigned long days = input_seconds / seconds_per_day;
+  input_seconds %= seconds_per_day;
 
-  unsigned long hours = input_seconds_long / seconds_per_hour;
-  input_seconds_long %= seconds_per_hour;
+  unsigned long hours = input_seconds / seconds_per_hour;
+  input_seconds %= seconds_per_hour;
 
-  unsigned long minutes = input_seconds_long / seconds_per_minute;
+  unsigned long minutes = input_seconds / seconds_per_minute;
 
-  unsigned long seconds = input_seconds_long % seconds_per_minute;
+  unsigned long seconds = input_seconds % seconds_per_minute;
 
   printf("This number of seconds is equivalent to:\n");
   printf("Weeks: %ld\n", weeks);
