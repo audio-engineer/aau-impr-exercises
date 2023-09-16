@@ -23,11 +23,11 @@ Book NewBook(char* title, char* author, char* publisher, int publishing_year,
 
 void PrintShelf(Book* shelf, size_t shelf_size);
 
-int SortByTitle(const void* argument_one, const void* argument_two);
+int SortByTitleComparator(const void* argument_one, const void* argument_two);
 
-int SortByYear(const void* argument_one, const void* argument_two);
+int SortByYearComparator(const void* argument_one, const void* argument_two);
 
-int SortByKind(const void* argument_one, const void* argument_two);
+int SortByKindComparator(const void* argument_one, const void* argument_two);
 
 void SortBooksByTitle(Book* shelf, size_t shelf_size);
 

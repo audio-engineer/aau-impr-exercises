@@ -42,7 +42,7 @@ void PrintShelf(Book* shelf, size_t shelf_size) {
 }
 
 // NOLINTNEXTLINE(bugprone-easily-swappable-parameters)
-int SortByTitle(const void* argument_one, const void* argument_two) {
+int SortByTitleComparator(const void* argument_one, const void* argument_two) {
   Book* book_one = (Book*)argument_one;
   Book* book_two = (Book*)argument_two;
 
@@ -50,7 +50,7 @@ int SortByTitle(const void* argument_one, const void* argument_two) {
 }
 
 // NOLINTNEXTLINE(bugprone-easily-swappable-parameters)
-int SortByYear(const void* argument_one, const void* argument_two) {
+int SortByYearComparator(const void* argument_one, const void* argument_two) {
   Book* book_one = (Book*)argument_one;
   Book* book_two = (Book*)argument_two;
 
@@ -66,7 +66,7 @@ int SortByYear(const void* argument_one, const void* argument_two) {
 }
 
 // NOLINTNEXTLINE(bugprone-easily-swappable-parameters)
-int SortByKind(const void* argument_one, const void* argument_two) {
+int SortByKindComparator(const void* argument_one, const void* argument_two) {
   Book* book_one = (Book*)argument_one;
   Book* book_two = (Book*)argument_two;
 
@@ -84,12 +84,12 @@ int SortByKind(const void* argument_one, const void* argument_two) {
 }
 
 void SortBooksByTitle(Book* shelf, size_t shelf_size) {
-  qsort(shelf, shelf_size, sizeof(shelf[0]), SortByTitle);
+  qsort(shelf, shelf_size, sizeof(shelf[0]), SortByTitleComparator);
 }
 
 void SortBooksByKindAndYear(Book* shelf, size_t shelf_size) {
-  qsort(shelf, shelf_size, sizeof(shelf[0]), SortByKind);
-  qsort(shelf, shelf_size, sizeof(shelf[0]), SortByYear);
+  qsort(shelf, shelf_size, sizeof(shelf[0]), SortByKindComparator);
+  qsort(shelf, shelf_size, sizeof(shelf[0]), SortByYearComparator);
 }
 
 int main() {
