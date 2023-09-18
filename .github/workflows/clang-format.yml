@@ -1,4 +1,4 @@
-name: Checks
+name: ClangFormat
 on: push
 jobs:
   ClangFormat:
