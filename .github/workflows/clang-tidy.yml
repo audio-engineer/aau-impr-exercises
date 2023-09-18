@@ -6,5 +6,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ZedThree/clang-tidy-review@v0.13.4
+        id: review
+        with:
+          config_file: '.clang-tidy'
       - if: steps.review.outputs.total_comments > 0
         run: exit 1
