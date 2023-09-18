@@ -8,3 +8,10 @@ jobs:
       - uses: DoozyX/clang-format-lint-action@v0.16.2
         with:
           clangFormatVersion: 16
+  ClangTidy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ZedThree/clang-tidy-review@v0.13.4
+      - if: steps.review.outputs.total_comments > 0
+        run: exit 1
