@@ -42,7 +42,7 @@ int main() {
       printf("Error: One or more numbers are not positive integers\n");
       break;
     }
-    printf("Greatest common divisor between %lu and %lu is %lu\n",user_input1,
+    printf("Greatest common divisor between %lu and %lu is %lu\n", user_input1,
            user_input2, gcd);
   }
 
