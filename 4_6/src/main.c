@@ -4,14 +4,14 @@
 /* AFLEVERINGS OPGAVE 4.6 */
 
 // Funktion for at finde GCD
-int FindGcd(int a, int b) {
-  while (b != 0) {
-    int temp = b;
-    b = a % b;
-    a = temp;
+int FindGcd(int num1, int num2) {
+  while (num2 != 0) {
+    int temp = num2;
+    num2 = num1 % num2;
+    num1 = temp;
   }
 
-  return a;
+  return num1;
 }
 
 int main() {
@@ -32,7 +32,7 @@ int main() {
     // Konverterer string til int
     char* endptr1 = NULL;
     char* endptr2 = NULL;
-    user_input1 = strtol(input_one, &endptr1, sizeof(input_one) );
+    user_input1 = strtol(input_one, &endptr1, sizeof(input_one));
     user_input2 = strtol(input_two, &endptr2, sizeof(input_two));
 
     // Bruger FindGcd funktionen til at finde GCD
@@ -41,7 +41,8 @@ int main() {
       // Error handling
       printf("Error: One or more numbers are not positive integers\n");
       break;
-    } printf("Greatest common divisor between %d and %d is %d\n", user_input1, user_input2, gcd);
+    } printf("Greatest common divisor between %d and %d is %d\n", user_input1,
+           user_input2, gcd);
 
   }
 
