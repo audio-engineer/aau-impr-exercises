@@ -4,7 +4,7 @@
 /* AFLEVERINGS OPGAVE 4.6 */
 
 // Funktion for at finde GCD
-int FindGcd(long num1, long num2) {
+long FindGcd(long num1, long num2) {
   while (num2 != 0) {
     long temp = num2;
     num2 = num1 % num2;
