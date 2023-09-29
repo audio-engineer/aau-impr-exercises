@@ -19,8 +19,8 @@ int main() {
   char* input_one = malloc(sizeof(char));
   char* input_two = malloc(sizeof(char));
 
-  int a;
-  int b;
+  int user_input1 = 0;
+  int user_input2 = 0;
 
   while (1) {
     // User input
@@ -32,16 +32,16 @@ int main() {
     // Konverterer string til int
     char* endptr1 = NULL;
     char* endptr2 = NULL;
-    a = strtol(input_one, &endptr1, sizeof(input_one) );
-    b = strtol(input_two, &endptr2, sizeof(input_two));
+    user_input1 = strtol(input_one, &endptr1, sizeof(input_one) );
+    user_input2 = strtol(input_two, &endptr2, sizeof(input_two));
 
     // Bruger FindGcd funktionen til at finde GCD
-    int gcd = FindGcd(a, b);
-    if (a <= 0 || b <= 0) {
+    int gcd = FindGcd(user_input1, user_input2);
+    if (user_input1 <= 0 || user_input2 <= 0) {
       // Error handling
       printf("Error: One or more numbers are not positive integers\n");
       break;
-    } printf("Greatest common divisor between %d and %d is %d\n", a, b, gcd);
+    } printf("Greatest common divisor between %d and %d is %d\n", user_input1, user_input2, gcd);
 
   }
 
