@@ -3,11 +3,11 @@
 int main(void) {
 
   int num1;
-	int num2;
-	int gcd;
+  int num2;
+  int gcd;
 
   // get numbers
-	scanf_s("%d %d", &num1, &num2);
+  scanf_s("%d %d", &num1, &num2);
   printf("Insert two numbers: ");
   scanf("%d %d", &num1, &num2);
 
@@ -15,7 +15,7 @@ int main(void) {
 
   if (num1 > num2) {
     gcd = num1 + 1;    // we add 1 to compensate for the 'gcd--'
-  } else {          // in the do-while loop. if not, 'gcd 5 5'
+  } else {             // in the do-while loop. if not, 'gcd 5 5'
     gcd = num2 + 1;    // would return '1' instead of '5'
   }
 
