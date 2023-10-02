@@ -14,9 +14,9 @@ int main(void) {
   // check which is bigger
 
   if (num1 > num2) {
-    gcd = num1 + 1;    // we add 1 to compensate for the 'gcd--'
-  } else {             // in the do-while loop. if not, 'gcd 5 5'
-    gcd = num2 + 1;    // would return '1' instead of '5'
+    gcd = num1 + 1;  // we add 1 to compensate for the 'gcd--'
+  } else {           // in the do-while loop. if not, 'gcd 5 5'
+    gcd = num2 + 1;  // would return '1' instead of '5'
   }
 
   // divide both numbers until modulo is 0
