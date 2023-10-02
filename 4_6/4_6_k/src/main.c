@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 int main(void) {
-
   int num1;
   int num2;
   int gcd;
