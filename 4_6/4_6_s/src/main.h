@@ -1,0 +1,4 @@
+#ifndef EXERCISES_4_6_s_SRC_MAIN_H_
+#define EXERCISES_4_6_s_SRC_MAIN_H_
+
+#endif  // EXERCISES_4_6_s_SRC_MAIN_H_
