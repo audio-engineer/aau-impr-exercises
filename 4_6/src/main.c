@@ -22,6 +22,8 @@ int main() {
   long user_input1 = 0;
   long user_input2 = 0;
 
+  static const int kBase = 10;
+
   while (1) {
     // User input
     printf("Enter positive integer: \n");
@@ -32,8 +34,8 @@ int main() {
     // Konverterer string til int
     char* endptr1 = NULL;
     char* endptr2 = NULL;
-    user_input1 = strtol(input_one, &endptr1, sizeof(input_one));
-    user_input2 = strtol(input_two, &endptr2, sizeof(input_two));
+    user_input1 = strtol(input_one, &endptr1, kBase);
+    user_input2 = strtol(input_two, &endptr2, kBase);
 
     // Bruger FindGcd funktionen til at finde GCD
     unsigned long gcd = FindGcd(user_input1, user_input2);
