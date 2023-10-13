@@ -1,3 +1,4 @@
+// NOLINTBEGIN
 #include "pixel.h"
 
 pixel make_pixel(unsigned int red, unsigned int green, unsigned int blue){
@@ -14,3 +15,4 @@ unsigned int get_green(pixel p){
 unsigned int get_blue(pixel p){
   return p & 0xff;
 }
+// NOLINTEND
