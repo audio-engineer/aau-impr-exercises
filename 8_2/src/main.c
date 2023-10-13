@@ -46,6 +46,7 @@ void AddVerticalLineToImage(ppm *image) {
 
   const unsigned int kColumn[kImageHeight] = {0};
 
+  // NOLINTNEXTLINE(clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling)
   memcpy(image->pixels[kImageWidth / 2], kColumn, sizeof(kColumn));
 }
 
@@ -61,6 +62,7 @@ void AddVerticalLineWithThicknessToImage(ppm *image,
 
   for (unsigned int x_coordinate = kStartColumn;
        x_coordinate < kStartColumn + thickness; x_coordinate++) {
+    // NOLINTNEXTLINE(clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling)
     memcpy(image->pixels[x_coordinate], kColumn, sizeof(kColumn));
   }
 }
@@ -110,6 +112,7 @@ void AddCircleToImage(ppm *image, int radius, Color *color) {
     if (decision < 0) {
       decision += 2 * x_coordinate + 3;
     } else {
+      // NOLINTNEXTLINE(readability-magic-numbers,cppcoreguidelines-avoid-magic-numbers)
       decision += 2 * (x_coordinate - y_coordinate) + 5;
       y_coordinate -= 1;
     }
