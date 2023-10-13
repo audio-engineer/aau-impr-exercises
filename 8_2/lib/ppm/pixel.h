@@ -1,4 +1,3 @@
-// NOLINTBEGIN
 /* PIXELS - A pixel represents a RGB color. */
 
 /** A new type that represents a single RGB pixel */
@@ -15,4 +14,3 @@ unsigned int get_green(pixel p);
 
 /** Access and return the blue component of the pixel p */
 unsigned int get_blue(pixel p);
-// NOLINTEND

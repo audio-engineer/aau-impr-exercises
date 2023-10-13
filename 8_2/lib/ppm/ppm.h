@@ -1,4 +1,3 @@
-// NOLINTBEGIN
 #include "pixel.h"
 
 /* PPM IMAGES */
@@ -37,4 +36,3 @@ ppm *read_image(char *file_name);
 
 /* Release the resources of the PPM image */
 void release_image(ppm *image);
-// NOLINTEND
