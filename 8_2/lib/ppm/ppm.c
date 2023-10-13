@@ -1,3 +1,4 @@
+// NOLINTBEGIN
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
@@ -160,3 +161,4 @@ void release_image(ppm *image){
   image->width = 0;
   image->height = 0;
 }
+// NOLINTEND
