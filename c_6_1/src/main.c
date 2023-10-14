@@ -1,6 +1,7 @@
 #include "main.h"
 
 #include <stdio.h>
+#include <stdlib.h>
 
 void AddVectors(Vector* vector_one, Vector* vector_two, Vector* result) {
   *result->component_one =
@@ -22,4 +23,6 @@ int main() {
   // NOLINTEND(readability-magic-numbers)
 
   printf("Result vector: (%d %d)", result_component_one, result_component_two);
+
+  return EXIT_SUCCESS;
 }
