@@ -1,8 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 /* AFLEVERINGS OPGAVE 4.6 */
 
+#include <stdlib.h>
+#include <stdio.h>
 // Funktion for at finde GCD
 long FindGcd(long num1, long num2) {
   while (num2 != 0) {
