@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.25)
 project(exercises C)
 
 set(CMAKE_C_STANDARD 23)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_subdirectory(1_9/)
 add_subdirectory(2_4/)
