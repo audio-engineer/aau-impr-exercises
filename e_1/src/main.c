@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/_types/_size_t.h>
 
 void PrintMenu() {
   printf("Welcome to the Calculator CLI. Copyright © 2023 AAU\n");
@@ -80,12 +81,12 @@ double* ReadSecondOperand(const char* message) {
   return second_operand;
 }
 
-bool IsValidOperator(const char* operator) {
-  if (1 < strlen(operator)) {
+bool IsValidMathOperator(const char* math_operator) {
+  if (1 < strlen(math_operator)) {
     return false;
   }
 
-  switch (*operator) {
+  switch (*math_operator) {
     case kAddition:
     case kSubtraction:
     case kMultiplication:
@@ -101,8 +102,8 @@ bool IsValidOperator(const char* operator) {
   }
 }
 
-bool IsBinaryOperator(const char* operator) {
-  switch (*operator) {
+bool IsBinaryMathOperator(const char* math_operator) {
+  switch (*math_operator) {
     case kAddition:
     case kSubtraction:
     case kMultiplication:
@@ -181,7 +182,7 @@ double RunCalculator() {
       return EXIT_FAILURE;
     }
 
-    if (!IsValidOperator(math_operator)) {
+    if (!IsValidMathOperator(math_operator)) {
       printf("Invalid math operator. Try again.\n");
 
       free(math_operator);
@@ -195,7 +196,7 @@ double RunCalculator() {
       break;
     }
 
-    if (IsBinaryOperator(math_operator)) {
+    if (IsBinaryMathOperator(math_operator)) {
       while (!(second_operand = ReadSecondOperand("Enter operand:"))) {
         printf("Second operand could not be set. Try again.\n");
       }
