@@ -4,7 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#ifdef __APPLE__
 #include <sys/_types/_size_t.h>
+#endif
 
 void PrintMenu() {
   printf("Welcome to the Calculator CLI. Copyright © 2023 AAU\n");
