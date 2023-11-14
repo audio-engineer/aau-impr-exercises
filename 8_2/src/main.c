@@ -3,7 +3,7 @@
 #include <memory.h>
 #include <stdlib.h>
 
-void AddHorizontalLineToImage(ppm *image) {
+void AddHorizontalLineToImage(ppm* image) {
   if (NULL == image) {
     return;
   }
@@ -14,7 +14,7 @@ void AddHorizontalLineToImage(ppm *image) {
   }
 }
 
-void AddHorizontalLineWithThicknessToImage(ppm *image,
+void AddHorizontalLineWithThicknessToImage(ppm* image,
                                            const unsigned short thickness) {
   if (NULL == image || 0 == thickness || kImageHeight < thickness ||
       kImageWidth < thickness) {
@@ -39,7 +39,7 @@ void AddHorizontalLineWithThicknessToImage(ppm *image,
   }
 }
 
-void AddVerticalLineToImage(ppm *image) {
+void AddVerticalLineToImage(ppm* image) {
   if (NULL == image) {
     return;
   }
@@ -50,7 +50,7 @@ void AddVerticalLineToImage(ppm *image) {
   memcpy(image->pixels[kImageWidth / 2], kColumn, sizeof(kColumn));
 }
 
-void AddVerticalLineWithThicknessToImage(ppm *image,
+void AddVerticalLineWithThicknessToImage(ppm* image,
                                          const unsigned short thickness) {
   if (NULL == image || 0 == thickness || kImageHeight < thickness ||
       kImageWidth < thickness) {
@@ -67,7 +67,7 @@ void AddVerticalLineWithThicknessToImage(ppm *image,
   }
 }
 
-void AddFilledRectangleToImage(ppm *image, Color *color) {
+void AddFilledRectangleToImage(ppm* image, Color* color) {
   for (unsigned int x_coordinate = kImageWidth / 4;
        x_coordinate < (kImageWidth / 4) * 3; x_coordinate++) {
     for (unsigned int y_coordinate = kImageHeight / 4;
@@ -78,8 +78,8 @@ void AddFilledRectangleToImage(ppm *image, Color *color) {
   }
 }
 
-void PlotCirclePoints(ppm *image, unsigned int x_coordinate,
-                      unsigned int y_coordinate, Color *color) {
+void PlotCirclePoints(ppm* image, unsigned int x_coordinate,
+                      unsigned int y_coordinate, Color* color) {
   const unsigned int kXCenter = kImageWidth / 2;
   const unsigned int kYCenter = kImageHeight / 2;
 
@@ -101,7 +101,7 @@ void PlotCirclePoints(ppm *image, unsigned int x_coordinate,
             make_pixel(color->red, color->green, color->blue));
 }
 
-void AddCircleToImage(ppm *image, int radius, Color *color) {
+void AddCircleToImage(ppm* image, int radius, Color* color) {
   int x_coordinate = 0;
   int y_coordinate = radius;
   int decision = 1 - radius;
@@ -126,32 +126,32 @@ void AddCircleToImage(ppm *image, int radius, Color *color) {
 int main() {
   // NOLINTBEGIN(readability-magic-numbers)
   // NOLINTBEGIN(cppcoreguidelines-avoid-magic-numbers)
-  ppm *image_one =
+  ppm* image_one =
       make_image(kImageWidth, kImageHeight, make_pixel(255, 255, 255));
   AddHorizontalLineToImage(image_one);
   write_image(image_one, "image_one.pnm");
 
-  ppm *image_two =
+  ppm* image_two =
       make_image(kImageWidth, kImageHeight, make_pixel(255, 255, 255));
   AddVerticalLineToImage(image_two);
   write_image(image_two, "image_two.pnm");
 
-  ppm *image_three =
+  ppm* image_three =
       make_image(kImageWidth, kImageHeight, make_pixel(255, 255, 255));
   AddHorizontalLineWithThicknessToImage(image_three, 6);
   write_image(image_three, "image_three.pnm");
 
-  ppm *image_four =
+  ppm* image_four =
       make_image(kImageWidth, kImageHeight, make_pixel(255, 255, 255));
   AddVerticalLineWithThicknessToImage(image_four, 5);
   write_image(image_four, "image_four.pnm");
 
-  ppm *image_five =
+  ppm* image_five =
       make_image(kImageWidth, kImageHeight, make_pixel(255, 255, 255));
   AddFilledRectangleToImage(image_five, &(struct Color){252, 186, 3});
   write_image(image_five, "image_five.pnm");
 
-  ppm *image_six =
+  ppm* image_six =
       make_image(kImageWidth, kImageHeight, make_pixel(255, 255, 255));
   AddCircleToImage(image_six, 150, &(struct Color){252, 186, 3});
   write_image(image_six, "image_six.pnm");
