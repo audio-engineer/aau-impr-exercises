@@ -11,19 +11,19 @@ typedef struct Color {
   unsigned short blue;
 } Color;
 
-void AddHorizontalLineToImage(ppm *image);
+void AddHorizontalLineToImage(ppm* image);
 
-void AddHorizontalLineWithThicknessToImage(ppm *image,
+void AddHorizontalLineWithThicknessToImage(ppm* image,
                                            unsigned short thickness);
 
-void AddVerticalLineToImage(ppm *image);
+void AddVerticalLineToImage(ppm* image);
 
-void AddVerticalLineWithThicknessToImage(ppm *image, unsigned short thickness);
+void AddVerticalLineWithThicknessToImage(ppm* image, unsigned short thickness);
 
-void AddFilledRectangleToImage(ppm *image, Color *color);
+void AddFilledRectangleToImage(ppm* image, Color* color);
 
-void PlotCirclePoints(ppm *image, unsigned int x_coordinate,
-                      unsigned int y_coordinate, Color *color);
+void PlotCirclePoints(ppm* image, unsigned int x_coordinate,
+                      unsigned int y_coordinate, Color* color);
 
 /**
  * @brief This function uses the midpoint circle algorithm to add a circle to
@@ -33,6 +33,6 @@ void PlotCirclePoints(ppm *image, unsigned int x_coordinate,
  * @param radius The circle's radius.
  * @param color RGB color parameters.
  */
-void AddCircleToImage(ppm *image, int radius, Color *color);
+void AddCircleToImage(ppm* image, int radius, Color* color);
 
 #endif  // EXERCISES_8_2_SRC_MAIN_H_
