@@ -1,4 +1,4 @@
 project(2_6 C)
 
-file(GLOB SRC_FILES src/*.c src/*.h)
-add_executable(${PROJECT_NAME} ${SRC_FILES})
+add_executable(${PROJECT_NAME} src/main.c)
+target_include_directories(${PROJECT_NAME} PRIVATE src/)
