@@ -1,5 +1,5 @@
-#ifndef EXERCISES_8_2_SRC_MAIN_H_
-#define EXERCISES_8_2_SRC_MAIN_H_
+#ifndef AAU_IMPR_EXERCISES_8_2_SRC_MAIN_H_
+#define AAU_IMPR_EXERCISES_8_2_SRC_MAIN_H_
 
 #include "ppm.h"
 
@@ -35,4 +35,4 @@ void PlotCirclePoints(ppm* image, unsigned int x_coordinate,
  */
 void AddCircleToImage(ppm* image, int radius, Color* color);
 
-#endif  // EXERCISES_8_2_SRC_MAIN_H_
+#endif  // AAU_IMPR_EXERCISES_8_2_SRC_MAIN_H_

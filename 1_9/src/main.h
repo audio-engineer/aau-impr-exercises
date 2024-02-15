@@ -1,6 +1,6 @@
-#ifndef EXERCISES_1_9_SRC_MAIN_H_
-#define EXERCISES_1_9_SRC_MAIN_H_
+#ifndef AAU_IMPR_EXERCISES_1_9_SRC_MAIN_H_
+#define AAU_IMPR_EXERCISES_1_9_SRC_MAIN_H_
 
 const float kDivisor = 3.0F;
 
-#endif  // EXERCISES_1_9_SRC_MAIN_H_
+#endif  // AAU_IMPR_EXERCISES_1_9_SRC_MAIN_H_

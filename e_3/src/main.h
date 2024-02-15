@@ -1,5 +1,5 @@
-#ifndef EXERCISES_E_3_SRC_MAIN_H_
-#define EXERCISES_E_3_SRC_MAIN_H_
+#ifndef AAU_IMPR_EXERCISES_E_3_SRC_MAIN_H_
+#define AAU_IMPR_EXERCISES_E_3_SRC_MAIN_H_
 
 enum Constants {
   kWeekdayNameLength = 3,
@@ -29,4 +29,4 @@ typedef struct Team {
   int goals_conceded;
 } Team;
 
-#endif  // EXERCISES_E_3_SRC_MAIN_H_
+#endif  // AAU_IMPR_EXERCISES_E_3_SRC_MAIN_H_

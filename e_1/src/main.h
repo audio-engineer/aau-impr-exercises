@@ -1,5 +1,5 @@
-#ifndef EXERCISES_E_1_SRC_MAIN_H_
-#define EXERCISES_E_1_SRC_MAIN_H_
+#ifndef AAU_IMPR_EXERCISES_E_1_SRC_MAIN_H_
+#define AAU_IMPR_EXERCISES_E_1_SRC_MAIN_H_
 
 enum Constants { kInputBufferSize = 256 };
 
@@ -28,4 +28,4 @@ void DoNextOperation(const OperationInputParameters* operation_input_parameters,
 
 double RunCalculator();
 
-#endif  // EXERCISES_E_1_SRC_MAIN_H_
+#endif  // AAU_IMPR_EXERCISES_E_1_SRC_MAIN_H_
