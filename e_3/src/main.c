@@ -49,6 +49,7 @@ void UpdateTeams() {
     }
 
     if (home_team_index == -1) {
+      // NOLINTNEXTLINE(clang-analyzer-security.insecureAPI.strcpy)
       strcpy(teams[total_teams].name, matches[i].home_team);
 
       home_team_index = total_teams;
@@ -68,6 +69,7 @@ void UpdateTeams() {
     }
 
     if (away_team_index == -1) {
+      // NOLINTNEXTLINE(clang-analyzer-security.insecureAPI.strcpy)
       strcpy(teams[total_teams].name, matches[i].away_team);
 
       away_team_index = total_teams;
