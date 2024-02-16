@@ -1,5 +1,5 @@
-#ifndef EXERCISES_B_334_17_SRC_MAIN_H_
-#define EXERCISES_B_334_17_SRC_MAIN_H_
+#ifndef AAU_IMPR_EXERCISES_B_334_17_SRC_MAIN_H_
+#define AAU_IMPR_EXERCISES_B_334_17_SRC_MAIN_H_
 
 enum Constants { kNumberOfNValues = 7 };
 
@@ -13,4 +13,4 @@ double FunctionH(double point_x);
 double Trap(double lower_bound, double upper_bound,
             short number_of_subintervals, double function(double point_x));
 
-#endif  // EXERCISES_B_334_17_SRC_MAIN_H_
+#endif  // AAU_IMPR_EXERCISES_B_334_17_SRC_MAIN_H_

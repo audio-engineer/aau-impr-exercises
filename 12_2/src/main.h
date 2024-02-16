@@ -1,5 +1,5 @@
-#ifndef EXERCISES_12_2_SRC_MAIN_H_
-#define EXERCISES_12_2_SRC_MAIN_H_
+#ifndef AAU_IMPR_EXERCISES_12_2_SRC_MAIN_H_
+#define AAU_IMPR_EXERCISES_12_2_SRC_MAIN_H_
 
 #include <stdlib.h>
 
@@ -33,4 +33,4 @@ void SortBooksByTitle(Book* shelf, size_t shelf_size);
 
 void SortBooksByKindAndYear(Book* shelf, size_t shelf_size);
 
-#endif  // EXERCISES_12_2_SRC_MAIN_H_
+#endif  // AAU_IMPR_EXERCISES_12_2_SRC_MAIN_H_

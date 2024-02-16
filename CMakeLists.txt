@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.25)
-project(exercises C)
+project(aau_impr_exercises C)
 
 set(CMAKE_C_STANDARD 23)
 set(CMAKE_C_STANDARD_REQUIRED ON)
@@ -19,3 +19,4 @@ add_subdirectory(8_2/)
 add_subdirectory(c_6_1/)
 add_subdirectory(e_1/)
 add_subdirectory(e_2/)
+add_subdirectory(e_3/)
